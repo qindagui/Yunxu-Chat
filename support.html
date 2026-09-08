@@ -1,1 +1,109 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>云序对话支持 / Yunxu Chat Support</title><style>:root{font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1f2937;background:#f6f9f9}body{margin:0}.wrap{max-width:900px;margin:auto;padding:32px 20px 64px}.card{background:#fff;border:1px solid #dce7e5;border-radius:16px;padding:28px;box-shadow:0 8px 28px rgba(25,70,65,.06)}h1{margin:0 0 8px;font-size:30px}h2{margin:28px 0 10px;font-size:20px}p,li{line-height:1.75}.meta{color:#64748b}.notice{padding:14px 16px;border:1px solid #cde5df;border-radius:12px;background:#eef8f5}a{color:#126e64}nav{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 0}</style></head><body><main class="wrap"><article class="card"><h1>支持与反馈 / Support</h1><p class="meta">云序对话 / Yunxu Chat · V0.1.12</p><p>使用问题、兼容性问题或隐私问题可发送邮件至 <a href="mailto:9072686@qq.com">9072686@qq.com</a>。</p><h2>反馈前建议</h2><ul><li>说明使用的浏览器（Chrome / Edge）及版本。</li><li>说明发生问题的 AI 网站和操作类型（Markdown / JSON / PDF / 复制 / 批量）。</li><li>可在“关于 → 导出诊断信息”生成本地诊断 JSON。诊断日志不包含聊天正文；发送前仍请自行检查文件内容。</li><li>不要发送密码、Cookie、访问令牌或其他认证材料。</li></ul><h2>隐私</h2><p>扩展不会自动上传诊断文件或聊天正文。只有你主动通过邮件等渠道发送材料时，开发者才会看到你选择提供的内容。</p><nav><a href="index.html">产品主页</a><a href="privacy.html">隐私政策 / Privacy Policy</a></nav></article></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>云序对话支持与联系 / Yunxu Chat Support</title>
+  <meta name="description" content="云序对话（Yunxu Chat）使用帮助、问题反馈、微信公众号与个人微信联系页面。">
+  <link rel="canonical" href="https://qindagui.github.io/Yunxu-Chat/support.html">
+  <style>
+    :root{
+      font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      color:#1f2937;
+      background:#f6f9f9;
+      --brand:#126e64;
+      --brand-soft:#eef8f5;
+      --line:#dce7e5;
+      --muted:#64748b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0}
+    .wrap{max-width:980px;margin:auto;padding:32px 20px 64px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 8px 28px rgba(25,70,65,.06)}
+    h1{margin:0 0 8px;font-size:30px;line-height:1.25}
+    h2{margin:30px 0 12px;font-size:21px}
+    h3{margin:0 0 8px;font-size:18px}
+    p,li{line-height:1.75}
+    .meta{color:var(--muted);margin-top:4px}
+    a{color:var(--brand)}
+    .notice{padding:14px 16px;border:1px solid #cde5df;border-radius:12px;background:var(--brand-soft)}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:16px}
+    .contact-card{border:1px solid var(--line);border-radius:16px;padding:20px;background:#fbfdfd;text-align:center}
+    .contact-card p{margin:6px 0;color:#475569}
+    .qr-link{display:block;width:min(100%,280px);margin:16px auto 12px;padding:10px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:transform .16s ease,box-shadow .16s ease}
+    .qr-link:hover{transform:translateY(-1px);box-shadow:0 7px 20px rgba(25,70,65,.10)}
+    .qr-link:focus-visible{outline:3px solid rgba(18,110,100,.22);outline-offset:3px}
+    .qr-image{display:block;width:100%;height:auto;max-height:280px;object-fit:contain;border-radius:10px}
+    .scan-tip{margin-top:8px!important;font-size:13px;color:var(--muted)!important}
+    .tag{display:inline-block;margin-top:4px;padding:4px 9px;border-radius:999px;background:var(--brand-soft);color:var(--brand);font-size:13px}
+    .support-list{padding-left:1.25rem}
+    nav{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+    .footer-note{margin-top:22px;color:var(--muted);font-size:14px}
+    @media (max-width:680px){
+      .wrap{padding:18px 12px 42px}
+      .card{padding:22px 18px;border-radius:14px}
+      h1{font-size:26px}
+      .contact-grid{grid-template-columns:1fr}
+      .qr-link{width:min(100%,260px)}
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <article class="card">
+    <h1>支持与联系 / Support</h1>
+    <p class="meta">云序对话 / Yunxu Chat · V0.1.12</p>
+
+    <p>如果你在使用云序对话时遇到问题，或有平台兼容、导出功能、使用体验方面的建议，欢迎通过下面的方式联系我们。</p>
+
+    <div class="contact-grid">
+      <section class="contact-card">
+        <h3>微信公众号</h3>
+        <span class="tag">更新 · 教程 · 公告</span>
+        <a class="qr-link" href="assets/wechat-official-account.jpg" target="_blank" rel="noopener" aria-label="查看微信公众号二维码大图">
+          <img class="qr-image" src="assets/wechat-official-account.jpg" alt="云序对话作者微信公众号二维码" width="1280" height="1280" loading="lazy">
+        </a>
+        <p class="scan-tip">微信扫码关注；点击二维码可查看大图。</p>
+        <p>用于发布版本更新、使用教程、公告和常见问题。</p>
+      </section>
+
+      <section class="contact-card">
+        <h3>个人微信</h3>
+        <span class="tag">反馈 · 建议 · 交流</span>
+        <a class="qr-link" href="assets/wechat-contact.png" target="_blank" rel="noopener" aria-label="查看个人微信二维码大图">
+          <img class="qr-image" src="assets/wechat-contact.png" alt="云序对话作者个人微信二维码" width="585" height="579" loading="lazy">
+        </a>
+        <p class="scan-tip">微信扫码添加；点击二维码可查看大图。</p>
+        <p>适合问题反馈、功能建议和日常交流。</p>
+      </section>
+    </div>
+
+    <h2>邮件联系</h2>
+    <p>也可以发送邮件至 <a href="mailto:9072686@qq.com">9072686@qq.com</a>。</p>
+
+    <h2>反馈前建议</h2>
+    <ul class="support-list">
+      <li>说明使用的浏览器（Chrome / Edge）及版本。</li>
+      <li>说明发生问题的 AI 网站和操作类型（Markdown / JSON / PDF / 复制 / 批量）。</li>
+      <li>可在“关于 → 导出诊断信息”生成本地诊断 JSON。诊断日志不包含聊天正文；发送前仍请自行检查文件内容。</li>
+      <li>如需提供截图，建议先遮盖账号、联系人、聊天正文等不希望公开的信息。</li>
+    </ul>
+
+    <h2>隐私与安全提醒</h2>
+    <div class="notice">
+      <strong>请勿通过微信、公众号或邮件发送账号密码、Cookie、Token、验证码或其他认证材料。</strong><br>
+      也不建议直接发送完整的私密聊天记录。若排查问题确实需要示例，请优先提供脱敏后的截图或诊断信息。
+    </div>
+    <p>云序对话不会自动上传诊断文件或聊天正文。只有你主动通过微信、邮件或其他渠道发送材料时，开发者才会看到你选择提供的内容。</p>
+
+    <nav>
+      <a href="index.html">产品主页</a>
+      <a href="privacy.html">隐私政策 / Privacy Policy</a>
+      <a href="https://github.com/qindagui/Yunxu-Chat/releases">GitHub Releases</a>
+    </nav>
+
+    <p class="footer-note">云序对话为独立开发的软件，与各第三方 AI 平台不存在隶属、授权或官方合作关系。</p>
+  </article>
+</main>
+</body>
+</html>
