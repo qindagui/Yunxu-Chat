@@ -1,2 +1,66 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>云序对话 / Yunxu Chat</title><style>:root{font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1f2937;background:#f6f9f9}body{margin:0}.wrap{max-width:900px;margin:auto;padding:32px 20px 64px}.card{background:#fff;border:1px solid #dce7e5;border-radius:16px;padding:28px;box-shadow:0 8px 28px rgba(25,70,65,.06)}h1{margin:0 0 8px;font-size:30px}h2{margin:28px 0 10px;font-size:20px}p,li{line-height:1.75}.meta{color:#64748b}.notice{padding:14px 16px;border:1px solid #cde5df;border-radius:12px;background:#eef8f5}a{color:#126e64}nav{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 0}</style></head><body><main class="wrap"><article class="card"><h1>云序对话 / Yunxu Chat</h1><p class="meta">AI 对话本地保存与归档浏览器扩展</p><p class="notice"><strong>本地优先：</strong>只有在用户主动执行导出、复制、PDF 或批量归档时，扩展才处理所选 AI 对话和当前 AI 页面来源 URL。聊天正文不上传云序服务器，不发送给云端大模型，不用于广告、画像或出售。</p><h2>主要用途</h2><p>把用户明确选择的 AI 网页对话在本机整理为 Markdown、JSON、可打印 PDF 或复制全文，并维护用户自己的本地对话档案。</p><h2>数据边界</h2><p>为识别当前来源和执行用户可见的导出/归档功能，扩展可能处理 Website content、User-generated content、Personal communications，以及当前受支持 AI 页面的域名/URL（Web browsing activity）。这些数据只服务于该单一用途。</p><nav><a href="privacy.html">隐私政策 / Privacy Policy</a><a href="support.html">支持与反馈 / Support</a></nav><h2>独立产品声明</h2><p>云序对话为独立开发的软件，与其兼容的第三方 AI 平台不存在隶属、授权或官方合作关系。第三方名称仅用于说明兼容场景。</p></article><p><strong>首次读取前：</strong>扩展会在产品 UI 内展示醒目披露，并要求你点击“同意并继续”；未同意时不会识别或读取当前 AI 页面。</p>
-</main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>云序对话 Yunxu Chat｜批量导出、下载与整理 AI 聊天记录</title>
+<meta name="description" content="云序对话（Yunxu Chat）是一款本地优先的浏览器扩展，用于批量导出、下载和整理 AI 聊天记录，并支持 Markdown、JSON、PDF 打印稿、复制全文与本地持续归档。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qindagui.github.io/Yunxu-Chat/">
+<meta property="og:title" content="云序对话 Yunxu Chat｜批量导出 AI 聊天记录">
+<meta property="og:description" content="批量导出、下载和整理 AI 聊天记录。聊天正文在本机处理，不上传云序服务器。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qindagui.github.io/Yunxu-Chat/">
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#18312f;background:#f4f9f8;line-height:1.7;--brand:#087f75;--brand2:#0b9b8e;--border:#d7e8e5;--muted:#60736f;--soft:#edf8f5;--ink:#18312f}
+*{box-sizing:border-box}body{margin:0}.wrap{max-width:1040px;margin:auto;padding:30px 20px 68px}.card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:34px;box-shadow:0 14px 42px rgba(25,70,65,.07)}h1{font-size:38px;line-height:1.18;margin:0 0 10px;letter-spacing:-.02em}h2{font-size:23px;margin:34px 0 12px}h3{font-size:17px;margin:0 0 6px}.eyebrow{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8f7f4;color:#08685f;font-weight:700;font-size:13px}.lead{font-size:19px;margin:14px 0 10px;max-width:790px}.meta{color:var(--muted);margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 12px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border-radius:12px;text-decoration:none;font-weight:750}.primary{background:var(--brand);color:#fff}.primary:hover{background:#066f67}.secondary{border:1px solid #bcd7d2;color:#096f66;background:#fff}.status{margin:18px 0 0;padding:13px 15px;border:1px solid #bfe2da;border-radius:13px;background:#eefaf7}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.feature{border:1px solid #e0ecea;border-radius:16px;padding:18px;background:#fbfdfd}.feature p{margin:5px 0 0;color:#536863}.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.step{border:1px solid #e0ecea;border-radius:16px;padding:18px}.step:before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#e9f7f4;color:#087267;font-weight:800;margin-bottom:10px}.notice{padding:15px 17px;border:1px solid #cde5df;border-radius:14px;background:var(--soft)}.nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid #e5efed}a{color:#087268}.small{font-size:14px;color:#687b77}.footer{margin:18px 4px 0;color:#71807d;font-size:13px}@media(max-width:760px){.wrap{padding:18px 12px 42px}.card{padding:22px}h1{font-size:31px}.lead{font-size:17px}.grid,.steps{grid-template-columns:1fr}.actions .btn{width:100%}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"云序对话","alternateName":"Yunxu Chat","applicationCategory":"BrowserApplication","operatingSystem":"Microsoft Edge / Chromium","description":"本地优先的 AI 聊天记录批量导出、下载与整理浏览器扩展。","url":"https://qindagui.github.io/Yunxu-Chat/","sameAs":["https://microsoftedge.microsoft.com/addons/detail/%E4%BA%91%E5%BA%8F%E5%AF%B9%E8%AF%9D/ocajiicbeobafcgipegofnpkjfdgnfjf","https://github.com/qindagui/Yunxu-Chat"]}
+</script>
+</head>
+<body>
+<main class="wrap">
+<article class="card">
+<span class="eyebrow">已在 Microsoft Edge Add-ons 正式发布</span>
+<h1>批量导出、下载并整理你的 AI 聊天记录</h1>
+<p class="lead"><strong>云序对话（Yunxu Chat）</strong>是一款本地优先的浏览器扩展。对具备可靠批量能力的受支持 AI 平台，可将多个历史会话快速整理并下载到本机；当前单个对话也可导出为 Markdown、JSON、PDF 打印稿或复制全文。</p>
+<p class="meta">减少逐条打开、逐条复制和手动保存，把重要 AI 对话变成你自己可长期管理的本地档案。</p>
+<div class="actions">
+<a class="btn primary" href="https://microsoftedge.microsoft.com/addons/detail/%E4%BA%91%E5%BA%8F%E5%AF%B9%E8%AF%9D/ocajiicbeobafcgipegofnpkjfdgnfjf" rel="noopener">在 Microsoft Edge Add-ons 安装</a>
+<a class="btn secondary" href="https://github.com/qindagui/Yunxu-Chat/releases" rel="noopener">GitHub Releases / 备用下载</a>
+</div>
+<p class="status"><strong>安装建议：</strong>普通 Edge 用户优先使用 Microsoft Edge Add-ons 官方商店版本，可直接安装并接收后续商店更新。</p>
+
+<h2>核心功能</h2>
+<div class="grid">
+<section class="feature"><h3>批量导出历史聊天</h3><p>在支持可靠 Batch 能力的平台中，由你明确选择范围并授权当前 AI 站点后，批量读取并处理已选历史会话。</p></section>
+<section class="feature"><h3>一键整理与下载</h3><p>多个会话可整理为 ZIP 下载；也可按“一段聊天一个本地文件”的方式长期保存，减少重复手工操作。</p></section>
+<section class="feature"><h3>多种本地格式</h3><p>当前对话可导出为 Markdown、JSON，生成适合浏览器打印/保存为 PDF 的页面，或直接复制整理后的 Markdown。</p></section>
+<section class="feature"><h3>持续归档与更新</h3><p>对同一会话建立本地档案关系；聊天新增内容后，可按用户操作更新对应的本地 Markdown / JSON 文件。</p></section>
+</div>
+
+<h2>怎么使用</h2>
+<div class="steps">
+<section class="step"><h3>打开 AI 对话</h3><p>进入受支持的 AI 聊天网站，打开当前会话；批量模式下先选择希望处理的历史范围。</p></section>
+<section class="step"><h3>主动启动导出</h3><p>由你点击导出、复制、PDF 或批量任务。扩展不会在未启动任务时后台扫描 AI 网站。</p></section>
+<section class="step"><h3>保存到自己的电脑</h3><p>选择 Markdown、JSON、ZIP、复制或打印/PDF 等方式，把结果保存和管理在本机。</p></section>
+</div>
+
+<h2>本地优先与隐私</h2>
+<p class="notice"><strong>聊天正文在本机处理。</strong>云序对话不把聊天正文上传到云序服务器，不发送给云端大模型，不用于广告画像或出售。对于支持结构化批量读取的平台，扩展只在你明确启动任务并授权当前站点后，利用当前已登录网站的同源只读能力读取你选择导出的会话。</p>
+<p class="small">不同 AI 网站的页面结构与能力不同，因此批量功能只在已有可靠 Batch 适配的平台提供；不会把不支持的平台宣传为可批量导出。</p>
+
+<nav class="nav">
+<a href="privacy.html">隐私政策 / Privacy Policy</a>
+<a href="support.html">支持与反馈 / Support</a>
+<a href="https://microsoftedge.microsoft.com/addons/detail/%E4%BA%91%E5%BA%8F%E5%AF%B9%E8%AF%9D/ocajiicbeobafcgipegofnpkjfdgnfjf" rel="noopener">Edge 官方商店页面</a>
+</nav>
+
+<h2>独立产品声明</h2>
+<p>云序对话为独立开发的软件，与 ChatGPT、Claude、Gemini、DeepSeek 等第三方 AI 平台不存在隶属、授权、认可或官方合作关系。第三方名称仅用于说明兼容场景，相关商标归其相应权利人所有。</p>
+</article>
+<p class="footer">Yunxu Chat / 云序对话 · GitHub Pages 官方产品主页</p>
+</main>
+</body>
+</html>

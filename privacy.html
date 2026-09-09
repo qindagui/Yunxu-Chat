@@ -4,51 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Yunxu Chat Privacy Policy / 云序对话隐私政策</title>
+<meta name="description" content="云序对话（Yunxu Chat）隐私政策：AI 对话单个或批量导出均采用本地优先处理，聊天正文不上传云序服务器。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qindagui.github.io/Yunxu-Chat/privacy.html">
 <style>
-:root{font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1f2937;background:#f7f9fb}body{margin:0}.wrap{max-width:900px;margin:auto;padding:32px 20px 64px}.card{background:#fff;border:1px solid #dde5ea;border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(25,50,70,.06)}h1{font-size:30px;margin:0 0 8px}h2{font-size:21px;margin:30px 0 10px}p,li{font-size:16px;line-height:1.75}.meta{color:#64748b}.notice{padding:14px 16px;border-radius:12px;background:#eef8f5;border:1px solid #cde9e0}code{background:#f3f5f7;padding:2px 5px;border-radius:5px}a{color:#176c61}.lang{margin-top:36px;padding-top:30px;border-top:2px solid #edf1f3}</style>
+:root{font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1f2937;background:#f7f9fb;line-height:1.75}*{box-sizing:border-box}body{margin:0}.wrap{max-width:940px;margin:auto;padding:30px 20px 64px}.card{background:#fff;border:1px solid #dde5ea;border-radius:18px;padding:30px;box-shadow:0 8px 30px rgba(25,50,70,.06)}h1{font-size:30px;margin:0 0 8px}h2{font-size:21px;margin:30px 0 10px}p,li{font-size:16px}.meta{color:#64748b}.notice{padding:14px 16px;border-radius:12px;background:#eef8f5;border:1px solid #cde9e0}.update{padding:12px 14px;border-radius:10px;background:#f8fafc;border:1px solid #e6edf0;color:#596b75;font-size:14px}code{background:#f3f5f7;padding:2px 5px;border-radius:5px}a{color:#176c61}.lang{margin-top:38px;padding-top:32px;border-top:2px solid #edf1f3}.nav{display:flex;gap:15px;flex-wrap:wrap;margin-top:28px;padding-top:18px;border-top:1px solid #edf1f3}.footer{font-size:13px;color:#71807d;margin:18px 2px 0}@media(max-width:720px){.wrap{padding:18px 12px 42px}.card{padding:21px}}
+</style>
 </head>
 <body><main class="wrap"><article class="card">
 <h1>Yunxu Chat Privacy Policy</h1>
-<p class="meta">Product: Yunxu Chat / 云序对话 · Effective date: September 8, 2026 · Contact: 9072686@qq.com</p>
+<p class="meta">Product: Yunxu Chat / 云序对话 · Effective date: September 8, 2026 · Wording updated: September 9, 2026 · Contact: 9072686@qq.com</p>
+<p class="update">The September 9 update clarifies the already-existing batch export/download use case and adds the official Microsoft Edge Add-ons link. It does not introduce a new data practice.</p>
 <p class="notice"><strong>Local-first:</strong> conversation content is processed on the user's device. The current version does not upload conversation content to Yunxu Chat servers, does not use cloud LLM APIs, and does not include remote telemetry.</p>
 <h2>1. Purpose and data handled</h2>
-<p>Yunxu Chat is a browser extension for user-initiated local saving, updating, copying, and printable export of the conversation in the current AI chat tab. When the user explicitly starts an action, the extension may process website content, user-generated content, and personal communications contained in that conversation, including message text, code blocks, tables, links, formulas, and visible reasoning content when enabled by the user. Under Chrome Web Store terminology, this may include <strong>Website content, User-generated content, Personal communications, and limited Web browsing activity</strong>. The Web browsing activity is limited to the domain/source URL or conversation URL of the current or explicitly selected supported AI page, which is needed to identify the requested source/conversation and perform the user-visible export/archive feature. Yunxu Chat does not read or build a general browsing history.</p>
+<p>Yunxu Chat is a browser extension for user-initiated local saving, batch exporting/downloading on supported platforms, updating, copying, and printable export of AI conversations. When the user explicitly starts an action, the extension may process website content, user-generated content, and personal communications contained in the current or explicitly selected conversations, including message text, code blocks, tables, links, formulas, and visible reasoning content when enabled by the user. Under Chrome Web Store terminology, this may include <strong>Website content, User-generated content, Personal communications, and limited Web browsing activity</strong>. The Web browsing activity is limited to the domain/source URL or conversation URL of the current or explicitly selected supported AI page, which is needed to identify the requested source/conversation and perform the user-visible export/archive feature. Yunxu Chat does not read or build a general browsing history.</p>
 <h2>2. Local processing and storage</h2>
-<p>Markdown, JSON, copied Markdown, and printable PDF preparation are generated locally. Files are saved through the browser Downloads system or a local folder explicitly authorized by the user through the File System Access API. Temporary download/print data may be stored in the extension's IndexedDB and cleaned according to an expiration policy.</p>
+<p>Markdown, JSON, copied Markdown, ZIP preparation for batch downloads, and printable PDF preparation are generated locally. Files are saved through the browser Downloads system or a local folder explicitly authorized by the user through the File System Access API. Temporary download/print data may be stored in the extension's IndexedDB and cleaned according to an expiration policy.</p>
 <p>To keep one local archive per conversation, the extension stores a small local index in <code>chrome.storage.local</code>. This index may contain platform/source identifiers, an archive ID, relative file location, message count, content revision fingerprint, integrity state, and update time. It does not contain the conversation body.</p>
 <h2>3. Permissions</h2>
 <p>The extension uses <code>activeTab</code>, <code>scripting</code>, <code>downloads</code>, <code>downloads.open</code>, <code>offscreen</code>, <code>storage</code>, <code>unlimitedStorage</code>, <code>clipboardWrite</code>, and <code>alarms</code> only for user-facing local conversation export/archive features. Single-conversation export continues to use user-invoked <code>activeTab</code>. Only when the user explicitly starts batch export does the extension request runtime optional host access for the current supported AI origin. The manifest contains a finite allowlist of domains registered by supported Batch Adapters; the extension requests only the current origin, first enumerates the selected history range on the visible page, then uses a dedicated background worker tab only for the resulting queue. It does not request <code>&lt;all_urls&gt;</code> or persistent <code>host_permissions</code>; <code>alarms</code> is only a local recovery watchdog for a user-started batch.</p>
 <h2>4. Diagnostics</h2>
 <p>Local diagnostic logs record task state, platform identifier, message count, processing stage, and error summaries, but not conversation text. Only when the user explicitly exports a diagnostic JSON file may it also contain the export time, extension version, and browser User-Agent for compatibility troubleshooting. Yunxu Chat does not automatically upload that file.</p>
 <h2>5. Limited use and sharing</h2>
-<p>Conversation data is used only to provide or improve the user-requested local saving, updating, copying, and printable export features. Yunxu Chat does not sell conversation data, use it for advertising or profiling, automatically transfer it to third parties, or allow the developer to read it. If a user voluntarily sends screenshots, files, or diagnostics through email, WeChat, or another support channel, the user chooses what to share.</p>
+<p>Conversation data is used only to provide or improve the user-requested local saving, batch exporting/downloading, updating, copying, and printable export features. Yunxu Chat does not sell conversation data, use it for advertising or profiling, automatically transfer it to third parties, or allow the developer to read it. If a user voluntarily sends screenshots, files, or diagnostics through email, WeChat, or another support channel, the user chooses what to share.</p>
 <h2>6. User control and deletion</h2>
-<p>Users choose when the extension reads the current tab, where local files are saved, whether an existing archive is updated, and whether a local folder/file is authorized. Users can delete exported files with their operating system, clear extension settings/diagnostic logs from the extension UI, remove local file/folder permissions through browser controls, or uninstall the extension to remove extension-managed local state according to browser behavior.</p>
-<h2>7. Same-origin structured reads</h2><p>For supported batch platforms, Yunxu Chat may make same-origin, read-only requests inside the AI website where the user is already signed in to retrieve conversations the user explicitly selected. Site authentication credentials stay in that site page context and are not stored or uploaded by Yunxu Chat. These website-internal interfaces are not treated as stable public APIs; unexpected changes fail closed.</p><h2>8. Remote code and future changes</h2>
+<p>Users choose when the extension reads the current tab or explicitly selected history, where local files are saved, whether an existing archive is updated, and whether a local folder/file is authorized. Users can delete exported files with their operating system, clear extension settings/diagnostic logs from the extension UI, remove local file/folder permissions through browser controls, or uninstall the extension to remove extension-managed local state according to browser behavior.</p>
+<h2>7. Same-origin structured reads</h2>
+<p>For supported batch platforms, Yunxu Chat may make same-origin, read-only requests inside the AI website where the user is already signed in to retrieve conversations the user explicitly selected. Site authentication credentials stay in that site page context and are not stored or uploaded by Yunxu Chat. These website-internal interfaces are not treated as stable public APIs; unexpected changes fail closed.</p>
+<h2>8. Remote code and future changes</h2>
 <p>All executable code is packaged with the extension; the current version does not download or execute remote code. If a future version adds accounts, cloud synchronization, online processing, telemetry, or materially different data practices, the privacy policy and in-product disclosures must be updated before that behavior is released.</p>
 <h2>9. Contact</h2><p>Privacy or support questions: <a href="mailto:9072686@qq.com">9072686@qq.com</a>.</p>
 
 <section class="lang" lang="zh-CN">
 <h1>云序对话隐私政策</h1>
-<p class="meta">产品：云序对话 / Yunxu Chat · 生效日期：2026-09-08 · 联系邮箱：9072686@qq.com</p>
+<p class="meta">产品：云序对话 / Yunxu Chat · 生效日期：2026-09-08 · 文案更新：2026-09-09 · 联系邮箱：9072686@qq.com</p>
+<p class="update">2026-09-09 的更新用于更明确说明原本已经存在的“批量导出/下载”使用场景，并加入 Microsoft Edge Add-ons 正式安装入口；没有新增数据处理方式。</p>
 <p class="notice"><strong>本地优先：</strong>聊天正文在用户设备本机处理。当前版本不把聊天正文上传到云序服务器，不调用云端大模型 API，也不包含远程遥测。</p>
 <h2>1. 产品用途与处理的数据</h2>
-<p>云序对话用于在用户主动操作时，将当前 AI 聊天标签页中的对话在本机保存、更新、复制或生成可打印版本。用户明确开始操作后，扩展可能处理该对话中的网页内容、用户生成内容和个人通信，包括消息正文、代码块、表格、链接、公式，以及在用户设置允许时页面可见的推理内容。按 Chrome Web Store 的分类，这些数据可能属于 <strong>Website content、User-generated content、Personal communications，以及有限范围的 Web browsing activity</strong>。其中 Web browsing activity 仅指当前/用户明确选择的受支持 AI 页面的域名、来源 URL 或会话 URL，用于识别用户要求导出的来源/会话并完成可见的导出/归档功能；云序不会读取或建立用户的一般浏览历史。</p>
+<p>云序对话用于在用户主动操作时，将当前 AI 对话或用户明确选择的受支持历史会话在本机保存、批量导出/下载、更新、复制或生成可打印版本。用户明确开始操作后，扩展可能处理相关对话中的网页内容、用户生成内容和个人通信，包括消息正文、代码块、表格、链接、公式，以及在用户设置允许时页面可见的推理内容。按 Chrome Web Store 的分类，这些数据可能属于 <strong>Website content、User-generated content、Personal communications，以及有限范围的 Web browsing activity</strong>。其中 Web browsing activity 仅指当前/用户明确选择的受支持 AI 页面的域名、来源 URL 或会话 URL，用于识别用户要求导出的来源/会话并完成可见的导出/归档功能；云序不会读取或建立用户的一般浏览历史。</p>
 <h2>2. 本地处理与保存</h2>
-<p>Markdown、JSON、复制内容和 PDF 打印稿均在本机生成。文件通过浏览器 Downloads 系统保存，或保存到用户通过 File System Access API 主动授权的本机文件夹。待下载/打印的数据可能短暂保存在扩展专用 IndexedDB，并按过期策略清理。</p>
+<p>Markdown、JSON、复制内容、批量 ZIP 下载准备和 PDF 打印稿均在本机生成。文件通过浏览器 Downloads 系统保存，或保存到用户通过 File System Access API 主动授权的本机文件夹。待下载/打印的数据可能短暂保存在扩展专用 IndexedDB，并按过期策略清理。</p>
 <p>为了维持“一段聊天一个本地文件”的持续更新关系，扩展会在 <code>chrome.storage.local</code> 保存少量本地索引，例如平台/来源身份、档案 ID、相对文件位置、消息数量、内容版本指纹、完整性状态和更新时间。索引不包含聊天正文。</p>
 <h2>3. 权限</h2>
 <p>扩展仅为用户可见的本地对话保存/归档功能使用 <code>activeTab</code>、<code>scripting</code>、<code>downloads</code>、<code>downloads.open</code>、<code>offscreen</code>、<code>storage</code>、<code>unlimitedStorage</code>、<code>clipboardWrite</code>、<code>alarms</code>。单个对话导出继续使用用户主动触发的 <code>activeTab</code>。只有用户明确启动批量导出时，扩展才运行时请求当前受支持 AI 页面 origin 对应的一项精确可选站点访问。Manifest 仅列出已注册 Batch Adapter 的有限域名白名单；历史范围先在当前可见页枚举，随后专用后台工作标签页只处理已建立的队列。不请求 <code>&lt;all_urls&gt;</code>，也不声明持久 <code>host_permissions</code>；<code>alarms</code> 仅作用户启动批量任务的本地中断恢复看门狗。</p>
 <h2>4. 诊断信息</h2>
 <p>本地诊断日志只记录任务状态、平台标识、消息数量、处理阶段和错误摘要，不记录聊天正文。只有用户主动导出诊断 JSON 时，文件还可能包含导出时间、扩展版本和浏览器 User-Agent，用于兼容性排查；云序不会自动上传该文件。</p>
 <h2>5. 有限使用与共享</h2>
-<p>聊天数据只用于提供或改进用户主动要求的本地保存、更新、复制和打印功能。云序不出售聊天数据，不用于广告或画像，不自动传输给第三方，也不允许开发者读取用户聊天正文。如用户主动通过邮箱、微信等支持渠道发送截图、文件或诊断信息，发送内容由用户自行决定。</p>
+<p>聊天数据只用于提供或改进用户主动要求的本地保存、批量导出/下载、更新、复制和打印功能。云序不出售聊天数据，不用于广告或画像，不自动传输给第三方，也不允许开发者读取用户聊天正文。如用户主动通过邮箱、微信等支持渠道发送截图、文件或诊断信息，发送内容由用户自行决定。</p>
 <h2>6. 用户控制与删除</h2>
-<p>用户决定何时读取当前网页、文件保存在哪里、是否更新已有文件，以及是否授权本机目录/文件。用户可以通过操作系统删除导出文件，在扩展界面清除设置和诊断日志，通过浏览器控制文件/目录授权，或卸载扩展以按浏览器机制清理扩展管理的本地状态。</p>
-<h2>7. 同源结构化读取</h2><p>对于支持批量结构化读取的平台，云序对话可能在用户当前已登录的原 AI 网站内发起同源只读请求，读取用户明确选择导出的会话。站点认证材料只留在该站点页面上下文，不由云序保存或上传。这些网站内部接口不被视为稳定公共 API；发生未知变化时按 fail-closed 处理。</p><h2>8. 远程代码与未来变化</h2>
+<p>用户决定何时读取当前网页或明确选择的历史范围、文件保存在哪里、是否更新已有文件，以及是否授权本机目录/文件。用户可以通过操作系统删除导出文件，在扩展界面清除设置和诊断日志，通过浏览器控制文件/目录授权，或卸载扩展以按浏览器机制清理扩展管理的本地状态。</p>
+<h2>7. 同源结构化读取</h2>
+<p>对于支持批量结构化读取的平台，云序对话可能在用户当前已登录的原 AI 网站内发起同源只读请求，读取用户明确选择导出的会话。站点认证材料只留在该站点页面上下文，不由云序保存或上传。这些网站内部接口不被视为稳定公共 API；发生未知变化时按 fail-closed 处理。</p>
+<h2>8. 远程代码与未来变化</h2>
 <p>所有可执行代码都随扩展包发布；当前版本不下载或执行远程代码。如果未来增加账号、云同步、在线处理、遥测或其他重大数据处理方式，必须在上线前更新本政策及产品内提示。</p>
 <h2>9. 联系方式</h2><p>隐私或支持问题：<a href="mailto:9072686@qq.com">9072686@qq.com</a>。</p>
 </section>
-</article></main><p><strong>Prominent disclosure and consent:</strong> Before Yunxu Chat first handles the current AI page, the extension UI asks the user to explicitly agree to the disclosed handling of conversation content and the current/selected AI source URL. If the user does not agree, Yunxu Chat does not identify or read that AI page.</p>
-<p><strong>醒目披露与同意：</strong>云序对话首次处理当前 AI 页面前，会在扩展 UI 内要求用户明确同意对话内容及当前/所选 AI 来源 URL 的上述处理；未同意时不会识别或读取该 AI 页面。</p>
-</body></html>
+
+<p class="notice"><strong>Prominent disclosure and consent / 醒目披露与同意：</strong> Before Yunxu Chat first handles the current AI page, the extension UI asks the user to explicitly agree to the disclosed handling of conversation content and the current/selected AI source URL. If the user does not agree, Yunxu Chat does not identify or read that AI page.<br>云序对话首次处理当前 AI 页面前，会在扩展 UI 内要求用户明确同意对话内容及当前/所选 AI 来源 URL 的上述处理；未同意时不会识别或读取该 AI 页面。</p>
+<nav class="nav"><a href="index.html">产品主页</a><a href="support.html">支持与反馈</a><a href="https://microsoftedge.microsoft.com/addons/detail/%E4%BA%91%E5%BA%8F%E5%AF%B9%E8%AF%9D/ocajiicbeobafcgipegofnpkjfdgnfjf" rel="noopener">Microsoft Edge Add-ons 安装</a></nav>
+</article><p class="footer">云序对话隐私政策 / Yunxu Chat Privacy Policy</p></main></body></html>
