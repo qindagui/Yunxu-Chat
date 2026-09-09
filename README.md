@@ -20,12 +20,12 @@ Yunxu Chat has been published on Microsoft Edge Add-ons. For most Edge users, th
 ### Product screenshot
 
 <p align="center">
-  <a href="assets/yunxu-chat-popup-r063.png">
-    <img src="assets/yunxu-chat-popup-r063.png" alt="Yunxu Chat browser extension interface showing Markdown export, PDF, copy full text and batch history export" width="420">
+  <a href="assets/yunxu-chat-popup-r063-en.png">
+    <img src="assets/yunxu-chat-popup-r063-en.png" alt="Yunxu Chat English interface showing Export Markdown, PDF, Copy full text and Batch export history" width="420">
   </a>
 </p>
 
-<p align="center"><sub>Yunxu Chat V0.1.12 · Revision 063 — real extension UI. The screenshot is currently in Simplified Chinese; the extension also includes an English UI.</sub></p>
+<p align="center"><sub>Yunxu Chat V0.1.12 · Revision 063 — real English extension UI.</sub></p>
 
 From the extension popup, users can export the current conversation to **Markdown**, prepare a **PDF/print** view, **copy the full conversation**, or open **Batch Export History** for supported platforms.
 
